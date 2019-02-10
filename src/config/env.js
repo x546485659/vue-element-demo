@@ -11,10 +11,10 @@ let routerMode = 'hash';
 let baseImgPath;
 
 if (process.env.NODE_ENV == 'development') {//dev环境config/dev.env.js中配置
-	baseUrl = 'http://tlwl.o2oshangjia.cn';
+	baseUrl = 'http://m.jiabangle.com';
     baseImgPath = '/img/';
 }else{
-	baseUrl = 'http://tlwl.o2oshangjia.cn';
+	baseUrl = 'http://xuedongwei.top';
 }
 
 export {

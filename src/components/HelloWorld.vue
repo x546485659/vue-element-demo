@@ -90,8 +90,27 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  methods:{
+    writemsg(){
+      console.log(this.$store);
+      console.log(this.$store.state.msg);
+      this.$store.commit('getMsg',{msg:"123"});
+      console.log(this.$store.state.msg);
+      this.$store.dispatch('increment',{msg:"123"});
+      console.log(this.$store.state.msg)
+      console.log(this.$store.getters.msg);
+    },
+    async getlist(){
+      // http://m.jiabangle.com/rs/carousel
+      let n = await this.$ajax.get('/rs/community',{app:"02"})
 
+    }
+  },
+  mounted(){
+    this.writemsg();
+    this.getlist();
+  }
 }
 </script>
 
